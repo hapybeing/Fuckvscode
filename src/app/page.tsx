@@ -16,7 +16,7 @@ export default function Home() {
               DIGITAL<br />
               ALCHEMY
             </h1>
-            <p className="mt-8 text-lg text-white-10 max-w-lg mx-auto animate-slide-up opacity-0 font-light" style={{animationDelay: '0.8s'}}>
+            <p className="mt-8 text-lg text-white/60 max-w-lg mx-auto animate-slide-up opacity-0 font-light" style={{animationDelay: '0.8s'}}>
               Crafting immersive digital experiences through code and cinema.
               <br />
               <span className="text-xs tracking-widest uppercase opacity-50 mt-12 block animate-pulse">Scroll to explore</span>
