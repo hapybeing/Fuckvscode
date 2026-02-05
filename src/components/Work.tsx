@@ -85,7 +85,8 @@ export default function Work() {
                   <span className="font-mono text-xs tracking-widest uppercase">{project.category}</span>
                 </div>
                 
-                <h3 className="mb-6 text-4xl font-bold text-white transition-colors group-hover:text-purple-200 md:text-6xl">
+                <h3 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white transition-colors group-hover:text-purple-200 break-all">
+
                   {project.title}
                 </h3>
                 
