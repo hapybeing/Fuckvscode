@@ -8,15 +8,17 @@
   --background-end-rgb: 0, 0, 0;
 }
 
-/* NUCLEAR FIX: Force Black Background */
 html, body {
   background-color: #050505 !important;
   color: rgb(var(--foreground-rgb));
+  
+  /* CRITICAL FIX: Force vertical scrolling */
+  overflow-y: auto !important; 
   overflow-x: hidden;
-  overscroll-behavior: none;
+  
+  height: 100%; /* Ensures body takes full height */
 }
 
-/* Gradient background for depth */
 body {
   background: linear-gradient(
       to bottom,
@@ -26,15 +28,6 @@ body {
   min-height: 100vh;
 }
 
-/* NOISE FILTER REMOVED FOR PERFORMANCE */
-
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
-html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
