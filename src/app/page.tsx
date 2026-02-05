@@ -1,23 +1,24 @@
+import LiquidCore from "@/components/LiquidCore";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden relative">
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden relative bg-cinema-black">
       
-      {/* Background Ambient Glow - like a cinema screen reflecting on a dark floor */}
-      <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+      {/* 3D LAYER: This sits behind everything */}
+      <LiquidCore />
 
-      {/* The Hero Section */}
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex flex-col">
+      {/* TEXT LAYER: This sits on top */}
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex flex-col pointer-events-none">
         
         {/* Top Label */}
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-white-5 bg-gradient-to-b from-zinc-200/0 via-zinc-200/0 to-transparent pb-6 pt-8 backdrop-blur-2xl dark:border-white-5 dark:bg-cinema-black/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-white-5 animate-fade-in opacity-0" style={{animationDelay: '0.2s'}}>
+        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-white-5 bg-gradient-to-b from-zinc-200/0 via-zinc-200/0 to-transparent pb-6 pt-8 backdrop-blur-sm dark:border-white-5 lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-white-5 animate-fade-in opacity-0" style={{animationDelay: '0.2s'}}>
           GAURANG&nbsp;
           <code className="font-mono font-bold">/ VISUALS</code>
         </p>
 
-        {/* Main Title - Massive Typography */}
+        {/* Main Title */}
         <div className="mt-32 relative flex place-items-center flex-col text-center">
-          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white-10 animate-slide-up opacity-0" style={{animationDelay: '0.5s'}}>
+          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white-10 animate-slide-up opacity-0 drop-shadow-2xl" style={{animationDelay: '0.5s'}}>
             DIGITAL<br />
             ALCHEMY
           </h1>
@@ -30,8 +31,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Grid Overlay for texture */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none"></div>
+      {/* Grain Overlay */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none z-20"></div>
     </main>
   );
 }
+
