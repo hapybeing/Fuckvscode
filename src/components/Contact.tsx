@@ -43,8 +43,8 @@ export default function Contact() {
           <p>GAURANG / VISUALS © 2026</p>
           <div className="flex gap-8">
             <a href="https://www.instagram.com/yaytwenty26?igsh=NDNwMDVka2lsdDdl" className="hover:text-white transition-colors">INSTAGRAM</a>
-            <a href="#" className="hover:text-white transition-colors">TWITTER</a>
-            <a href="#" className="hover:text-white transition-colors">GITHUB</a>
+            <a href="https://x.com/hapybeing" className="hover:text-white transition-colors">TWITTER</a>
+            <a href="https://github.com/hapybeing" className="hover:text-white transition-colors">GITHUB</a>
           </div>
         </div>
 
