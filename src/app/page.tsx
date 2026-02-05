@@ -1,6 +1,7 @@
 import LiquidCore from "@/components/LiquidCore";
 import Work from "@/components/Work";
-import About from "@/components/About"; // IMPORT ABOUT SECTION
+import About from "@/components/About";
+import Contact from "@/components/Contact"; // IMPORT FINAL MODULE
 
 export default function Home() {
   return (
@@ -24,11 +25,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WORK SECTION */}
       <Work />
-
-      {/* ABOUT SECTION */}
       <About />
+      <Contact />
 
     </main>
   );
