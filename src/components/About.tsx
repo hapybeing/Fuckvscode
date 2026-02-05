@@ -81,8 +81,11 @@ export default function About() {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col justify-center border-l border-white/10 pl-4">
-                <span className="text-xs font-mono uppercase text-white/30">{stat.label}</span>
-                <span className="mt-1 text-2xl font-bold text-white">{stat.value}</span>
+               <span className={`mt-1 font-bold text-white ${stat.value.length > 5 ? 'text-lg md:text-xl' : 'text-2xl'}`}>
+  {stat.value}
+</span>
+ <span className="text-xs font-mono uppercase text-white/30">{stat.label}</span>
+                
               </div>
             ))}
           </motion.div>
