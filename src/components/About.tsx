@@ -12,7 +12,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="relative z-20 w-full bg-cinema-black py-32">
+    <section id="about" className="relative z-20 w-full bg-transparent py-32">
       <div className="container mx-auto px-6">
         
         <div className="mb-24 border-l-2 border-white-10 pl-8">
