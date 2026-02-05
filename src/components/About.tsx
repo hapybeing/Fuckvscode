@@ -7,7 +7,7 @@ const stats = [
   { label: "Experience", value: "3+ YRS" },
   { label: "Projects", value: "20+" },
   { label: "Commitment", value: "100%" },
-  { label: "Location", value: "KOTA, RJ" },
+  { label: "Zone", value: "WORLDWIDE" },
 ];
 
 export default function About() {
