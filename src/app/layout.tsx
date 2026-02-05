@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // IMPORT THE COMPONENT
+import Navbar from "@/components/Navbar";
+import SmoothScroll from "@/components/SmoothScroll"; // IMPORT PHYSICS
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,18 +19,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-cinema-black">
       <body className={inter.className}>
-        {/* The Noise Overlay */}
-        <div className="noise-overlay" />
-        
-        {/* THE NAVBAR IS ACTIVE */}
-        <Navbar />
-
-        {/* Main Content */}
-        <main className="relative z-10 flex min-h-screen flex-col">
-          {children}
-        </main>
+        <SmoothScroll>
+          <div className="noise-overlay" />
+          <Navbar />
+          <main className="relative z-10 flex min-h-screen flex-col">
+            {children}
+          </main>
+        </SmoothScroll>
       </body>
     </html>
   );
 }
+
 
