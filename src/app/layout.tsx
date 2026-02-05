@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// WE IMPORT CUSTOM FONTS HERE
+import { Syne, Space_Grotesk } from "next/font/google"; 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StarField from "@/components/StarField";
 
-const inter = Inter({ subsets: ["latin"] });
+// Configure the "Display" font (Headers)
+const syne = Syne({ 
+  subsets: ["latin"],
+  variable: "--font-syne",
+});
+
+// Configure the "Tech" font (Details)
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ["latin"],
+  variable: "--font-space",
+});
 
 export const metadata: Metadata = {
   title: "Gaurang | Visual Experience",
@@ -18,9 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-cinema-black">
-      <body className={inter.className}>
-        
-        {/* NATIVE SCROLLING ACTIVE - No wrapper needed */}
+      {/* We apply both fonts to the body */}
+      <body className={`${syne.variable} ${spaceGrotesk.variable} font-sans`}>
         
         <StarField />
         <Navbar />
