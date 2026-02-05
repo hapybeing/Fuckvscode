@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link"; // Added Link import
+import Link from "next/link";
 
 const projects = [
   {
     id: "01",
+    path: "neural-interface", // <--- NEW: Tells it which folder to open
     title: "NEURAL_INTERFACE",
     category: "Web Development",
     description: "A reactive dashboard visualizing AI memory patterns in real-time.",
@@ -16,6 +17,7 @@ const projects = [
   },
   {
     id: "02",
+    path: "void-walker",
     title: "VOID_WALKER",
     category: "Cinematography",
     description: "Abstract visual study of light pollution in urban environments.",
@@ -24,6 +26,7 @@ const projects = [
   },
   {
     id: "03",
+    path: "cyber-garden",
     title: "CYBER_GARDEN",
     category: "Interactive Art",
     description: "Generative organic structures grown through algorithmic noise.",
@@ -34,11 +37,9 @@ const projects = [
 
 export default function Work() {
   return (
-    // FIX: Changed bg-cinema-black to bg-transparent
     <section id="work" className="relative z-20 w-full bg-transparent py-32">
       <div className="container mx-auto px-6">
         
-        {/* Section Header */}
         <div className="mb-24 flex flex-col gap-4 border-l-2 border-white-10 pl-8">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
@@ -55,7 +56,6 @@ export default function Work() {
           </p>
         </div>
 
-        {/* Project Grid */}
         <div className="flex flex-col gap-32">
           {projects.map((project, index) => (
             <motion.div
@@ -66,7 +66,6 @@ export default function Work() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group relative grid grid-cols-1 gap-12 md:grid-cols-2 items-center"
             >
-              {/* Project Image */}
               <div className={`relative h-[50vh] w-full overflow-hidden rounded-sm bg-cinema-gray ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                 <Image
@@ -75,13 +74,11 @@ export default function Work() {
                   fill
                   className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
                 />
-                
                 <div className="absolute left-4 top-4 z-20 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 backdrop-blur-md">
                   <span className="font-mono text-xs text-white">{project.id}</span>
                 </div>
               </div>
 
-              {/* Project Info */}
               <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1 md:text-right md:items-end' : ''}`}>
                 <div className="mb-6 flex items-center gap-4 text-purple-400">
                   <span className="h-[1px] w-12 bg-purple-400/50"></span>
@@ -104,7 +101,8 @@ export default function Work() {
                   ))}
                 </div>
 
-                <Link href={`/work/${project.id}`} className="mt-12 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:gap-4 group-hover:text-purple-400">
+                {/* UPDATED LINK LOGIC */}
+                <Link href={`/work/${project.path}`} className="mt-12 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white transition-all group-hover:gap-4 group-hover:text-purple-400">
                   View Case Study <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
