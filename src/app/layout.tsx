@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
-import StarField from "@/components/StarField"; // <--- We imported the engine here
+import StarField from "@/components/StarField";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,25 +21,13 @@ export default function RootLayout({
     <html lang="en" className="bg-cinema-black">
       <body className={inter.className}>
         <SmoothScroll>
-          
-          {/* THE STARFIELD LAYER */}
-          {/* This sits in the background and rotates slowly */}
           <StarField />
-          
-          {/* The Noise Overlay */}
-          <div className="noise-overlay" />
-          
-          {/* The Navigation Bar */}
           <Navbar />
-
-          {/* Main Content */}
           <main className="relative z-10 flex min-h-screen flex-col">
             {children}
           </main>
-          
         </SmoothScroll>
       </body>
     </html>
   );
 }
-
