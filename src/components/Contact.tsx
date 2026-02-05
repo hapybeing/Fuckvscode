@@ -28,7 +28,7 @@ export default function Contact() {
           </p>
 
           <a 
-            href="mailto:your-email@example.com" 
+            href="mailto: gaurangk.inbox@gmail.com" 
             className="group relative z-10 inline-flex items-center gap-4 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black"
           >
             <Mail className="h-4 w-4" />
@@ -42,7 +42,7 @@ export default function Contact() {
         <div className="mt-32 flex flex-col items-center justify-between gap-8 border-t border-white-5 pt-8 text-xs font-mono text-white/30 md:flex-row">
           <p>GAURANG / VISUALS © 2026</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">INSTAGRAM</a>
+            <a href="https://www.instagram.com/yaytwenty26?igsh=NDNwMDVka2lsdDdl" className="hover:text-white transition-colors">INSTAGRAM</a>
             <a href="#" className="hover:text-white transition-colors">TWITTER</a>
             <a href="#" className="hover:text-white transition-colors">GITHUB</a>
           </div>
