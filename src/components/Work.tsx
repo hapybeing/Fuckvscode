@@ -9,7 +9,7 @@ const projects = [
   {
     id: "01",
     path: "neural-interface", // <--- NEW: Tells it which folder to open
-    title: "NEURAL_INTERFACE",
+    title: "NEURAL_ INTERFACE",
     category: "Web Development",
     description: "A reactive dashboard visualizing AI memory patterns in real-time.",
     tags: ["React", "Three.js", "WebGL"],
@@ -85,7 +85,7 @@ export default function Work() {
                   <span className="font-mono text-xs tracking-widest uppercase">{project.category}</span>
                 </div>
                 
-                <h3 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white transition-colors group-hover:text-purple-200 break-all">
+                <h3 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white transition-colors group-hover:text-purple-200 break-words">
 
                   {project.title}
                 </h3>
