@@ -22,7 +22,7 @@ export default function Contact() {
           </motion.h2>
 
           <a 
-            href="mailto:your-email@example.com" 
+            href="mailto: gaurangk.inbox@gmail.com" 
             className="group relative z-10 inline-flex items-center gap-4 rounded-full border border-white/20 bg-white/5 px-10 py-5 text-lg font-bold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black hover:scale-105"
           >
             <Mail className="h-5 w-5" />
